@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TRADE WITH GAUTAM JHA</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800;900&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1137951112278277');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1137951112278277&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --y1:#F59E0B;--y2:#FBBF24;--y3:#FDE68A;--y4:#FFF3C4;
+  --dark:#1A0F00;--white:#FFFFFF;--offwhite:#FFFDF5;
+  --card:#FFFFFF;--border:rgba(245,158,11,0.2)
+}
+html,body{min-height:100%;background:var(--offwhite);color:var(--dark);font-family:'Inter',sans-serif;overflow-x:hidden}
+
+#bgCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+
+/* DIAGONAL STRIPE BG */
+.stripe-bg{
+  position:fixed;top:0;left:0;width:100%;height:100%;z-index:1;pointer-events:none;
+  background:repeating-linear-gradient(
+    135deg,
+    transparent,transparent 60px,
+    rgba(245,158,11,0.025) 60px,rgba(245,158,11,0.025) 61px
+  );
+}
+
+/* TOPBAR */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.92);border-bottom:1px solid rgba(245,158,11,0.2);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:11px 18px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 16px rgba(245,158,11,0.1)}
+.topbar-brand{font-family:'Orbitron',sans-serif;font-size:13px;letter-spacing:2px;background:linear-gradient(90deg,var(--dark),var(--y1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.topbar-live{display:flex;align-items:center;gap:5px;font-size:10px;font-weight:800;letter-spacing:2px;color:var(--y1)}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#22C55E;animation:lp 1.2s ease-in-out infinite;box-shadow:0 0 8px #22C55E}
+@keyframes lp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.3;transform:scale(0.6)}}
+
+/* TICKER */
+.ticker-wrap{position:relative;z-index:10;background:linear-gradient(90deg,var(--dark),#2D1800,var(--dark));padding:8px 0;overflow:hidden}
+.ticker-track{display:flex;white-space:nowrap;animation:tick 28s linear infinite}
+@keyframes tick{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-item{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--y2);padding:0 28px}
+.tdot{color:var(--y3);font-size:14px}
+
+.main{position:relative;z-index:10;padding:0 16px}
+
+/* HERO */
+.hero{text-align:center;padding:26px 0 10px}
+
+/* LOGO */
+.logo-wrap{position:relative;width:116px;height:116px;margin:0 auto 16px}
+.ring-outer{position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--dark),var(--y1),var(--y2),var(--y3),var(--y2),var(--y1),var(--dark));animation:spin 3.5s linear infinite;padding:3px}
+.ring-inner{width:100%;height:100%;border-radius:50%;background:white;display:flex;align-items:center;justify-content:center;position:relative;box-shadow:inset 0 0 16px rgba(245,158,11,0.1)}
+.ring-inner::before{content:'';position:absolute;inset:7px;border-radius:50%;background:conic-gradient(rgba(245,158,11,0.2),transparent,rgba(251,191,36,0.15),transparent);animation:spin 2s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.logo-img{width:76px;height:76px;object-fit:contain;border-radius:50%;position:relative;z-index:2}
+.logo-fb{position:absolute;bottom:2px;right:2px;width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--dark),var(--y1));display:flex;align-items:center;justify-content:center;font-size:13px;z-index:3;border:2px solid white;box-shadow:0 0 10px rgba(245,158,11,0.5);animation:bp 2s ease-in-out infinite}
+@keyframes bp{0%,100%{box-shadow:0 2px 10px rgba(245,158,11,0.4)}50%{box-shadow:0 0 20px rgba(245,158,11,0.7)}}
+
+/* TITLE */
+.t1{font-family:'Orbitron',sans-serif;font-size:clamp(15px,4vw,22px);letter-spacing:2px;line-height:1.3;display:block;color:rgba(26,15,0,0.45);font-weight:700;margin-bottom:2px}
+.t2{font-family:'Orbitron',sans-serif;font-size:clamp(38px,11vw,76px);letter-spacing:3px;line-height:0.88;display:block;background:linear-gradient(135deg,var(--dark),var(--y1),#D97706);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 2px 8px rgba(245,158,11,0.25))}
+.t3{font-family:'Orbitron',sans-serif;font-size:clamp(28px,8vw,58px);letter-spacing:4px;line-height:0.9;display:block;background:linear-gradient(135deg,var(--y1),var(--y2),#FFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 2px 6px rgba(245,158,11,0.3))}
+
+.title-line{display:block;width:80px;height:3px;margin:10px auto;background:linear-gradient(90deg,var(--dark),var(--y1),var(--y2));border-radius:4px;animation:lineexp 2s ease-in-out infinite alternate;box-shadow:0 0 10px rgba(245,158,11,0.4)}
+@keyframes lineexp{0%{width:50px;opacity:0.5}100%{width:200px;opacity:1}}
+
+.chip{display:inline-flex;align-items:center;gap:6px;background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:50px;padding:5px 16px;font-size:10px;font-weight:700;letter-spacing:2px;color:var(--y1);margin:10px auto 0}
+
+/* CTA */
+.cta-btn{display:block;width:100%;max-width:360px;margin:16px auto;padding:17px 20px;font-family:'Orbitron',sans-serif;font-size:13px;letter-spacing:2px;color:var(--dark);background:linear-gradient(135deg,var(--y1),var(--y2),#FFF176);border:none;border-radius:14px;cursor:pointer;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(245,158,11,0.4),0 1px 4px rgba(0,0,0,0.08);transition:transform 0.15s,box-shadow 0.15s;text-decoration:none;text-align:center;font-weight:900}
+.cta-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);animation:shine 2.5s ease-in-out infinite}
+@keyframes shine{0%{left:-100%}60%,100%{left:100%}}
+.cta-btn::after{content:'';position:absolute;inset:0;border-radius:14px;border:1px solid rgba(255,255,255,0.4);pointer-events:none}
+.cta-btn:active{transform:scale(0.97)}
+
+.hero-desc{margin:14px auto 0;max-width:340px;font-size:13px;line-height:1.75;color:rgba(26,15,0,0.55);font-weight:600}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:380px;margin:20px auto}
+.stat{background:white;border:1px solid var(--border);border-radius:16px;padding:15px 8px;text-align:center;position:relative;overflow:hidden;box-shadow:0 4px 16px rgba(245,158,11,0.08)}
+.stat::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--dark),var(--y1))}
+.stat-num{font-family:'Orbitron',sans-serif;font-size:21px;letter-spacing:1px;background:linear-gradient(90deg,var(--dark),var(--y1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-lbl{font-size:9px;font-weight:700;letter-spacing:1.5px;color:rgba(26,15,0,0.4);margin-top:3px}
+
+/* STOCK MARQUEE */
+.stocks-wrap{margin:16px 0;overflow:hidden;background:white;border:1px solid var(--border);border-radius:14px;box-shadow:0 4px 16px rgba(245,158,11,0.08);padding:10px 0}
+.stocks-track{display:flex;white-space:nowrap;animation:stk 18s linear infinite}
+@keyframes stk{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.stock-item{display:inline-flex;align-items:center;gap:6px;padding:0 18px;font-size:11px;font-weight:700;letter-spacing:0.5px;color:var(--dark)}
+.sup{color:#16A34A}.sdn{color:#DC2626}
+
+/* SECTION TITLE */
+.sec-title{text-align:center;font-size:11px;font-weight:700;letter-spacing:3px;color:rgba(26,15,0,0.3);margin:22px 0 12px}
+.sec-title::before,.sec-title::after{content:'';display:inline-block;width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--y1));vertical-align:middle;margin:0 10px}
+.sec-title::after{background:linear-gradient(90deg,var(--y2),transparent)}
+
+/* FEATURES */
+.features{display:grid;gap:10px;max-width:400px;margin:0 auto}
+.feat{display:flex;align-items:center;gap:14px;background:white;border:1px solid var(--border);border-radius:16px;padding:16px;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 2px 12px rgba(245,158,11,0.07);position:relative;overflow:hidden}
+.feat::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--dark),var(--y1));border-radius:4px 0 0 4px}
+.feat:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,158,11,0.15)}
+.feat-icon{width:46px;height:46px;border-radius:12px;flex-shrink:0;background:linear-gradient(135deg,rgba(245,158,11,0.1),rgba(251,191,36,0.07));border:1px solid rgba(245,158,11,0.18);display:flex;align-items:center;justify-content:center;font-size:22px}
+.feat-text h4{font-size:11px;font-weight:800;letter-spacing:0.5px;margin-bottom:3px;color:var(--dark);font-family:'Orbitron',sans-serif}
+.feat-text p{font-size:11px;color:rgba(26,15,0,0.5);line-height:1.5;font-weight:600}
+
+/* TRUST */
+.trust{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;max-width:380px;margin:16px auto 0}
+.badge{display:inline-flex;align-items:center;gap:5px;background:white;border:1px solid var(--border);border-radius:8px;padding:7px 12px;font-size:10px;font-weight:700;letter-spacing:1px;color:var(--dark);box-shadow:0 2px 8px rgba(245,158,11,0.08)}
+
+/* GLOW LINE */
+.glow-line{height:1px;max-width:400px;margin:22px auto;background:linear-gradient(90deg,transparent,var(--y1),var(--y2),transparent);box-shadow:0 0 8px rgba(245,158,11,0.4);animation:gp 3s ease-in-out infinite}
+@keyframes gp{0%,100%{opacity:0.4}50%{opacity:1}}
+
+/* FOOTER */
+.footer{text-align:center;padding:24px 16px 38px;position:relative;z-index:10}
+.footer-brand{font-family:'Orbitron',sans-serif;font-size:14px;letter-spacing:3px;background:linear-gradient(90deg,var(--dark),var(--y1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
+.footer-credit{font-size:10px;color:rgba(26,15,0,0.3);letter-spacing:2px;font-weight:700;text-decoration:none;display:block}
+</style>
+</head>
+<body>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','APNI_PIXEL_ID_YAHAN');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=APNI_PIXEL_ID_YAHAN&ev=PageView&noscript=1"/></noscript>
+
+<canvas id="bgCanvas"></canvas>
+<div class="stripe-bg"></div>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-brand">TRADE WITH GAUTAM JHA</div>
+  <div class="topbar-live"><div class="live-dot"></div>MARKET LIVE</div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="tdot">📈</span> TRADE WITH GAUTAM JHA &nbsp;★&nbsp; STOCK MARKET EXPERT</span>
+    <span class="ticker-item"><span class="tdot">💹</span> NIFTY · BANKNIFTY · STOCKS &nbsp;★&nbsp; DAILY CALLS</span>
+    <span class="ticker-item"><span class="tdot">🎯</span> INTRADAY · SWING · OPTIONS &nbsp;★&nbsp; HIGH ACCURACY</span>
+    <span class="ticker-item"><span class="tdot">📊</span> EXPERT ANALYSIS &nbsp;★&nbsp; JOIN NOW FREE</span>
+    <span class="ticker-item"><span class="tdot">📈</span> TRADE WITH GAUTAM JHA &nbsp;★&nbsp; STOCK MARKET EXPERT</span>
+    <span class="ticker-item"><span class="tdot">💹</span> NIFTY · BANKNIFTY · STOCKS &nbsp;★&nbsp; DAILY CALLS</span>
+    <span class="ticker-item"><span class="tdot">🎯</span> INTRADAY · SWING · OPTIONS &nbsp;★&nbsp; HIGH ACCURACY</span>
+    <span class="ticker-item"><span class="tdot">📊</span> EXPERT ANALYSIS &nbsp;★&nbsp; JOIN NOW FREE</span>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+  <div class="hero">
+
+    <div class="logo-wrap">
+      <div class="ring-outer">
+        <div class="ring-inner">
+          <img class="logo-img" src="png.jpg" alt="Gautam Jha"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div style="display:none;width:76px;height:76px;border-radius:50%;background:linear-gradient(135deg,#1A0F00,#F59E0B);align-items:center;justify-content:center;font-size:34px;position:relative;z-index:2;">📈</div>
+        </div>
+      </div>
+      <div class="logo-fb">💹</div>
+    </div>
+
+    <span class="t1">TRADE WITH</span>
+    <span class="t2">GAUTAM</span>
+    <span class="t3">JHA</span>
+    <div class="title-line"></div>
+
+    <div class="chip">📊 &nbsp; STOCK MARKET CHANNEL</div>
+
+    <!-- CTA 1 — seedha neeche -->
+    <a class="cta-btn" id="btn1" href="https://t.me/+h3ohWQUbz1lhY2Y1"
+       onclick="if(typeof fbq!=='undefined')fbq('track','Subscribe')">
+      📈 &nbsp; JOIN TRADE WITH GAUTAM JHA
+    </a>
+
+    <p class="hero-desc">Gautam Jha ke saath smart trading sikho aur karo. Nifty, BankNifty, Options — har din accurate calls. Bilkul free — aaj hi join karo!</p>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">40K+</div>
+      <div class="stat-lbl">MEMBERS</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">87%</div>
+      <div class="stat-lbl">ACCURACY</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">FREE</div>
+      <div class="stat-lbl">JOIN</div>
+    </div>
+  </div>
+
+  <!-- LIVE STOCK TICKER -->
+  <div class="stocks-wrap">
+    <div class="stocks-track">
+      <span class="stock-item">NIFTY 50 <span class="sup">▲ 24,850 +1.2%</span></span>
+      <span class="stock-item">BANKNIFTY <span class="sup">▲ 52,340 +0.8%</span></span>
+      <span class="stock-item">RELIANCE <span class="sup">▲ 2,910 +1.5%</span></span>
+      <span class="stock-item">TCS <span class="sdn">▼ 3,840 -0.3%</span></span>
+      <span class="stock-item">INFY <span class="sup">▲ 1,920 +2.1%</span></span>
+      <span class="stock-item">HDFC <span class="sup">▲ 1,680 +0.9%</span></span>
+      <span class="stock-item">SENSEX <span class="sup">▲ 81,500 +1.1%</span></span>
+      <span class="stock-item">NIFTY 50 <span class="sup">▲ 24,850 +1.2%</span></span>
+      <span class="stock-item">BANKNIFTY <span class="sup">▲ 52,340 +0.8%</span></span>
+      <span class="stock-item">RELIANCE <span class="sup">▲ 2,910 +1.5%</span></span>
+      <span class="stock-item">TCS <span class="sdn">▼ 3,840 -0.3%</span></span>
+      <span class="stock-item">INFY <span class="sup">▲ 1,920 +2.1%</span></span>
+      <span class="stock-item">HDFC <span class="sup">▲ 1,680 +0.9%</span></span>
+      <span class="stock-item">SENSEX <span class="sup">▲ 81,500 +1.1%</span></span>
+    </div>
+  </div>
+
+  <div class="sec-title">WHY TRADE WITH GAUTAM JHA</div>
+
+  <div class="features">
+    <div class="feat">
+      <div class="feat-icon">📊</div>
+      <div class="feat-text">
+        <h4>INTRADAY CALLS</h4>
+        <p>Nifty aur BankNifty ke accurate intraday buy/sell signals daily</p>
+      </div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📈</div>
+      <div class="feat-text">
+        <h4>OPTIONS TIPS</h4>
+        <p>Call & Put options strategies with clear entry, target aur SL</p>
+      </div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🎯</div>
+      <div class="feat-text">
+        <h4>SWING TRADING</h4>
+        <p>Multi-day trades with well-defined risk-reward setups</p>
+      </div>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🏆</div>
+      <div class="feat-text">
+        <h4>MARKET ANALYSIS</h4>
+        <p>Daily market outlook, sector view aur macro analysis</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust">
+    <div class="badge">✅ VERIFIED</div>
+    <div class="badge">📊 DAILY CALLS</div>
+    <div class="badge">🏆 PROVEN</div>
+  </div>
+
+  <div class="glow-line"></div>
+
+  <!-- CTA 2 -->
+  <a class="cta-btn" id="btn2" href="https://t.me/+h3ohWQUbz1lhY2Y1"
+     onclick="if(typeof fbq!=='undefined')fbq('track','Subscribe')">
+    💹 &nbsp; ABHI JOIN KARO — 100% FREE
+  </a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-brand">TRADE WITH GAUTAM JHA</div>
+  <a href="https://t.me/+3XoqJNLxYHswNTc1" class="footer-credit">ADVERTISEMENT BY @ShouryaGupta11</a>
+</div>
+
+<script>
+(function(){
+  var c=document.getElementById('bgCanvas'),ctx=c.getContext('2d'),W,H;
+  function resize(){W=c.width=window.innerWidth;H=c.height=window.innerHeight}
+  resize();window.addEventListener('resize',resize);
+
+  // Animated chart lines
+  var charts=[];
+  for(var i=0;i<5;i++){
+    var pts=[];var y=Math.random()*0.5+0.25;
+    for(var j=0;j<=24;j++){y=Math.max(0.1,Math.min(0.9,y+(Math.random()-0.47)*0.07));pts.push({x:j/24,y:y})}
+    charts.push({pts:pts,op:Math.random()*0.05+0.025,color:Math.random()>0.5?'245,158,11':'251,191,36',phase:Math.random()*Math.PI*2,speed:Math.random()*0.004+0.002});
+  }
+
+  // Particles
+  var parts=[];
+  for(var i=0;i<16;i++) parts.push({x:Math.random()*1200,y:Math.random()*2000,r:Math.random()*1.6+0.7,vx:(Math.random()-0.5)*0.35,vy:(Math.random()-0.5)*0.35,op:Math.random()*0.25+0.08,color:Math.random()>0.5?'245,158,11':'26,15,0'});
+
+  var t=0;
+  function draw(){
+    ctx.clearRect(0,0,W,H);t+=0.006;
+    // Warm gradient
+    var gr=ctx.createRadialGradient(W*0.5,H*0.3,0,W*0.5,H*0.3,W*0.9);
+    gr.addColorStop(0,'rgba(255,230,150,0.12)');gr.addColorStop(1,'rgba(255,253,245,0)');
+    ctx.fillStyle=gr;ctx.fillRect(0,0,W,H);
+
+    // Chart lines
+    charts.forEach(function(l){
+      var pulse=Math.sin(t*l.speed*100+l.phase)*0.4+0.6;
+      ctx.strokeStyle='rgba('+l.color+','+(l.op*pulse)+')';
+      ctx.lineWidth=1;ctx.beginPath();
+      l.pts.forEach(function(p,i){var px=p.x*W,py=p.y*H;i===0?ctx.moveTo(px,py):ctx.lineTo(px,py)});
+      ctx.stroke();
+    });
+
+    // Particles
+    parts.forEach(function(p){
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+      var pl=Math.sin(t*2+p.x*0.01)*0.3+0.7;
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.shadowColor='rgba('+p.color+',0.6)';ctx.shadowBlur=8;
+      ctx.fillStyle='rgba('+p.color+','+(p.op*pl)+')';
+      ctx.fill();ctx.shadowBlur=0;
+    });
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1137951112278277');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1137951112278277&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+  
+</body>
+</html>
